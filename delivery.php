@@ -45,7 +45,7 @@ ini_set('display_errors', 1);
             </tr>
 
             <?php
-            if($uname != 'malbok@gmail.com'){ 
+            if($uname != 'naoufelbenmensour@gmail.com'){ 
             $q2= "SELECT * FROM delivery WHERE pincode= (SELECT pincode from vendors where email='$uname') ";
         }
         else{

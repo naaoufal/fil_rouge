@@ -21,7 +21,6 @@ $(document).ready(function(){
 										'<td>'+ value.email +'</td>'+
 										'<td>'+ value.phone +'</td>'+
 										'<td>'+value.street+'<br>'+value.city+'<br>'+value.pincode+'</td>'+
-										'<td><a class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a></td>'+
 									'</tr>';
 					});
 

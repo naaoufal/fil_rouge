@@ -71,7 +71,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="container">
 			
 			<div class="logo">
-				<h1 ><a href="index.php"><b>T<br>H<br>E</b>Grocery Store<span>The Best Supermarket</span></a></h1>
+			<h1 ><a href="index.php"><b>T<br>H<br>E</b>ELECTRO Store<span>The Best Electro Shop</span></a></h1>
 			</div>
 			<div class="head-t">
 				<ul class="card">

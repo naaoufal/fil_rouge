@@ -11,7 +11,7 @@ $cust= $_SESSION['customer'];
 	<div class="container">
 		<div class="col-md-3 footer-grid">
 			<h3>About Us</h3>
-			<p> We Believe in providing you with the Best, Fresh and Supreme Quality products for your daily kitchen, household and much more </p>
+			<p> We Believe in providing you with the Best, Original and Supreme Quality products for your Workstation, Setups and much more </p>
 		</div>
 		<div class="col-md-3 footer-grid ">
 			<h3>Menu</h3>

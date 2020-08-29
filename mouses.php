@@ -74,7 +74,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="container">
 			
 			<div class="logo">
-				<h1 ><a href="index.php"><b>T<br>H<br>E</b>Grocery Store<span>The Best Supermarket</span></a></h1>
+			<h1 ><a href="index.php"><b>T<br>H<br>E</b>ELECTRO Store<span>The Best Electro Shop</span></a></h1>
 			</div>
 			
 			<?php 
@@ -135,9 +135,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
     <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel"> -->
       <!-- Indicators -->
-      <ol class="carousel-indicators">
+      <!-- <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -157,7 +157,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
         </div>
       </div>
     
-    </div><!-- /.carousel -->
+    </div>/.carousel -->
 
 <!--content-->
 <!-- <div class="kic-top ">
@@ -194,7 +194,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="product">
 		<div class="container">
 		<div class="spec ">
-				<h3>Household Products</h3>
+				<h3>Mouses</h3>
 				<div class="ser-t">
 					<b></b>
 					<span><i></i></span>
@@ -230,7 +230,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											</h6>							
 										</div>
 										<div class="mid-2">
-											<p ><label> Rs <?php echo $res2['product_price'] +20;?></label><em class="item_price"> Rs <?php echo $res2['product_price'];?></em></p>
+											<p ><label> $ <?php echo $res2['product_price'] +20;?></label><em class="item_price"> $ <?php echo $res2['product_price'];?></em></p>
 											  <div class="block">
 												<div class="starbox small ghosting"> </div>
 											</div>

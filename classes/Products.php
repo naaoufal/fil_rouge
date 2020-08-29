@@ -35,7 +35,7 @@ class Products
 	public function getProducts(){
 		
 		$uname= $_SESSION['user'];
-		if($uname != 'malbok@gmail.com'){
+		if($uname != 'naoufelbenmensour@gmail.com'){
 
 			$q = $this->con->query("SELECT p.product_id, p.product_title, p.product_price,p.product_qty, p.product_desc, p.product_image, c.cat_title, c.cat_id, b.brand_id, b.brand_title FROM products p JOIN categories c ON c.cat_id = p.product_cat JOIN brands b ON b.brand_id = p.product_brand WHERE p.vendor_name= '$uname'");
 			
@@ -179,7 +179,7 @@ class Products
 			if ($file['size'] > (1024 * 2)) {
 				
 				$uniqueImageName = time()."_".$file['name'];
-				if (move_uploaded_file($file['tmp_name'], $_SERVER['DOCUMENT_ROOT']."/big_store/web/images/".$uniqueImageName)) {
+				if (move_uploaded_file($file['tmp_name'], $_SERVER['DOCUMENT_ROOT']."/big_store/images/".$uniqueImageName)) {
 					$uname= $_SESSION['user'];
 					$q = $this->con->query("UPDATE products SET 
 										product_cat = '$category_id', 

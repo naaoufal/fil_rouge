@@ -11,7 +11,7 @@ error_reporting(0);
 <!DOCTYPE html>
 <html>
 <head>
-<title>Grocery Store</title>
+<title>Elecrto Shop</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -23,6 +23,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <link href="css/style.css" rel='stylesheet' type='text/css' />
+<style>
+	#banner{
+		background-image : url('images/wu.jpg');
+		/* background-color : red; */
+	}
+</style>
 <!-- js -->
    <script src="js/jquery-1.11.1.min.js"></script>
 <!-- //js -->
@@ -75,7 +81,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="container">
 			
 			<div class="logo">
-				<h1 ><a href="index.php"><b>T<br>H<br>E</b>Grocery Store<span>The Best Supermarket</span></a></h1>
+			<h1 ><a href="index.php"><b>T<br>H<br>E</b>ELECTRO Store<span>The Best Electro Shop</span></a></h1>
 			</div>
 			<div class="head-t">
 				<ul class="card">
@@ -102,10 +108,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>			
 </div>
   <!---->
-<div data-vide-bg="video/video">
+<div id="banner">
     <div class="container">
 		<div class="banner-info">
-			<h3> A One of A Kind Marketplace </h3>	
+			<h3> A One of A Kind Store </h3>	
 			<div class="search-form">
 				<form action="index-search.php" method="post">
 					<input type="text" placeholder="Search for over 5,000 products, categories & brands" name="search">
@@ -131,14 +137,14 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</div>
 		</div>
 			<div class="tab-head ">
-				<nav class="nav-sidebar">
+				<!-- <nav class="nav-sidebar">
 					<ul class="nav tabs ">
 					  <li class="active"><a href="#tab1" data-toggle="tab">Staples</a></li>
 					  <li class=""><a href="#tab2" data-toggle="tab">Snacks</a></li> 
 					  <li class=""><a href="#tab3" data-toggle="tab">Fruits & Vegetables</a></li>  
 					  <li class=""><a href="#tab4" data-toggle="tab">Breakfast & Cereal</a></li>
 					</ul>
-				</nav>
+				</nav> -->
 
 				<div class=" tab-content tab-content-t ">
 					<div class="tab-pane active text-style" id="tab1">
@@ -152,7 +158,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									$vendor= $res['email'];
 								}*/
 
-								$q2= "SELECT * FROM products WHERE product_cat=17 LIMIT 4";
+								$q2= "SELECT * FROM products WHERE product_qty<100 LIMIT 4";
 								$data2= mysqli_query($conn, $q2);
 								$total2= mysqli_num_rows($data2);
 								
@@ -161,7 +167,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">								
 									<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img" id="<?php echo $res2['product_id']; ?>">
-										<?php echo "<img src='images/".$res2['product_image']."'>";?> 
+										<?php echo "<img src='".$res2['product_image']."'>";?> 
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -171,7 +177,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											</h6>							
 										</div>
 										<div class="mid-2">
-											<p ><label> Rs <?php echo $res2['product_price'] +20;?></label><em class="item_price"> Rs <?php echo $res2['product_price'];?></em></p>
+											<p ><label> $ <?php echo $res2['product_price'] +20;?></label><em class="item_price"> $ <?php echo $res2['product_price'];?></em></p>
 											  <div class="block">
 												<div class="starbox small ghosting"> </div>
 											</div>
@@ -217,7 +223,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">								
 									<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img" id="<?php echo $res2['product_id']; ?>">
-										<?php echo "<img src='images/".$res2['product_image']."'>";?> 
+										<?php echo "<img src='".$res2['product_image']."'>";?> 
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -227,7 +233,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											</h6>							
 										</div>
 										<div class="mid-2">
-											<p ><label> Rs <?php echo $res2['product_price'] +20;?></label><em class="item_price"> Rs <?php echo $res2['product_price'];?></em></p>
+											<p ><label> $ <?php echo $res2['product_price'] +20;?></label><em class="item_price"> $ <?php echo $res2['product_price'];?></em></p>
 											  <div class="block">
 												<div class="starbox small ghosting"> </div>
 											</div>
@@ -273,7 +279,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">								
 									<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img" id="<?php echo $res2['product_id']; ?>">
-										<?php echo "<img src='images/".$res2['product_image']."'>";?> 
+										<?php echo "<img src='".$res2['product_image']."'>";?> 
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -283,7 +289,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											</h6>							
 										</div>
 										<div class="mid-2">
-											<p ><label> Rs <?php echo $res2['product_price'] +20;?></label><em class="item_price"> Rs <?php echo $res2['product_price'];?></em></p>
+											<p ><label> $ <?php echo $res2['product_price'] +20;?></label><em class="item_price"> $ <?php echo $res2['product_price'];?></em></p>
 											  <div class="block">
 												<div class="starbox small ghosting"> </div>
 											</div>
@@ -329,7 +335,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 m-wthree">
 								<div class="col-m">								
 									<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img" id="<?php echo $res2['product_id']; ?>">
-										<?php echo "<img src='images/".$res2['product_image']."'>";?> 
+										<?php echo "<img src='".$res2['product_image']."'>";?> 
 										<div class="offer"><p><span>Offer</span></p></div>
 									</a>
 									<div class="mid-1">
@@ -339,7 +345,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											</h6>							
 										</div>
 										<div class="mid-2">
-											<p ><label> Rs <?php echo $res2['product_price'] +20;?></label><em class="item_price"> Rs <?php echo $res2['product_price'];?></em></p>
+											<p ><label> $ <?php echo $res2['product_price'] +20;?></label><em class="item_price"> $ <?php echo $res2['product_price'];?></em></p>
 											  <div class="block">
 												<div class="starbox small ghosting"> </div>
 											</div>
@@ -376,24 +382,24 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		
 		<div class="col-md-4 m-w3ls">
 			<div class="col-md1 ">
-				<a href="kitchen.php">
-					<img src="images/co1.jpg" class="img-responsive img" alt="">
+				<a href="laptops.php">
+					<img src="images/laptop.jpg" class="img-responsive img" alt="">
 					<div class="big-sa">
 						<h6>New Collections</h6>
-						<h3>Season<span>ing </span></h3>
-						<p>Choose the Best Variety of Cereals </p>
+						<h3><span>Best Laptops </span></h3>
+						<p>Choose the Best Original Products </p>
 					</div>
 				</a>
 			</div>
 		</div>
 		<div class="col-md-4 m-w3ls1">
 			<div class="col-md ">
-				<a href="hold.php">
-					<img src="images/co.jpg" class="img-responsive img" alt="">
+				<a href="mobiles.php">
+					<img src="images/mobile.jpg" class="img-responsive img" alt="">
 					<div class="big-sale">
 						<div class="big-sale1">
-							<h3>Big <span>Sale</span></h3>
-							<p>Get the Best Quality at a Whooping Discount </p>
+							<h3><span>Big Sale</span></h3>
+							<p>Get the Best Quality Of Our Store </p>
 						</div>
 					</div>
 				</a>
@@ -401,20 +407,20 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</div>
 		<div class="col-md-4 m-w3ls">
 			<div class="col-md2 ">
-				<a href="kitchen.php">
-					<img src="images/co2.jpg" class="img-responsive img1" alt="">
+				<a href="headset.php">
+					<img src="images/headset.jpg" class="img-responsive img1" alt="">
 					<div class="big-sale2">
-						<h3>Cooking <span>Oil</span></h3>
-						<p>Healthy Oils make Great Diet </p>		
+						<h3><span>Best Headsets</span></h3>
+						<p>Search For Your Best Gaming Headsets </p>		
 					</div>
 				</a>
 			</div>
 			<div class="col-md3 ">
-				<a href="kitchen.php">
-					<img src="images/co3.jpg" class="img-responsive img1" alt="">
+				<a href="mouses.php">
+					<img src="images/mouse.jpg" class="img-responsive img1" alt="">
 					<div class="big-sale3">
-						<h3>Vegeta<span>bles</span></h3>
-						<p>Get Fresh Seasonal Vegetables Delivered at your Doorstep </p>
+						<h3><span>Mouses</span></h3>
+						<p>Here You Will Found Best Mouses</p>
 					</div>
 				</a>
 			</div>
@@ -436,15 +442,15 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-         <a href="kitchen.php"> <img class="first-slide" src="images/ba.jpg" alt="First slide"></a>
+         <a href="laptops.php"> <img class="first-slide" src="images/laptops-slider.jpg" alt="First slide"></a>
        
         </div>
         <div class="item">
-         <a href="care.php"> <img class="second-slide " src="images/ba1.jpg" alt="Second slide"></a>
+         <a href="mobiles.php"> <img class="second-slide " src="images/laptops-slider.jpg" alt="Second slide"></a>
          
         </div>
         <div class="item">
-          <a href="hold.php"><img class="third-slide " src="images/ba2.jpg" alt="Third slide"></a>
+          <a href="headset.php"><img class="third-slide " src="images/laptops-slider.jpg" alt="Third slide"></a>
           
         </div>
 <!-- 
@@ -466,7 +472,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="product">
 		<div class="container">
 			<div class="spec ">
-				<h3>Special Offers</h3>
+				<h3>Special Products</h3>
 				<div class="ser-t">
 					<b></b>
 					<span><i></i></span>
@@ -484,7 +490,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								}*/
 
 								/*echo $vendor;*/
-								$q2= "SELECT * FROM products LIMIT 16, 24";
+								$q2= "SELECT * FROM products WHERE product_qty>100 LIMIT 4";
 								$data2= mysqli_query($conn, $q2);
 								$total2= mysqli_num_rows($data2);
 								
@@ -493,7 +499,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<div class="col-md-3 pro-1">
 								<div class="col-m">								
 									<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img" id="<?php echo $res2['product_id']; ?>">
-										<?php echo "<img src='images/".$res2['product_image']."'>";?> 
+										<?php echo "<img src='".$res2['product_image']."'>";?> 
 									</a>
 									<div class="mid-1">
 										<div class="women">
@@ -502,7 +508,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											</h6>							
 										</div>
 										<div class="mid-2">
-											<p ><label> Rs <?php echo $res2['product_price'] +20;?></label><em class="item_price"> Rs <?php echo $res2['product_price'];?></em></p>
+											<p ><label> $ <?php echo $res2['product_price'] +20;?></label><em class="item_price"> $ <?php echo $res2['product_price'];?></em></p>
 											  <div class="block">
 												<div class="starbox small ghosting"> </div>
 											</div>
@@ -533,7 +539,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<h6><a href="single.php">  Lady Finger</a>(250 g)</h6>							
 										</div>
 										<div class="mid-2">
-											<p ><label> Rs 5.00</label><em class="item_price"> Rs 4.50</em></p>
+											<p ><label> $ 5.00</label><em class="item_price"> $ 4.50</em></p>
 											  <div class="block">
 												<div class="starbox small ghosting"> </div>
 											</div>

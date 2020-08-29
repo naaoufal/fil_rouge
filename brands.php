@@ -17,7 +17,7 @@
        </script>
 
 <?php 
-        if($admin !='malbok@gmail.com'){
+        if($admin != "naoufelbenmensour@gmail.com"){
       ?>
 
 
@@ -153,12 +153,11 @@
                 <input type="text" name="e_brand_title" class="form-control" placeholder="Enter Brand Name">
               </div>
             </div>
-            <input type="hidden" name="edit_brand" value="1">
+            <input type="hidden" name="edit_brand" value="">
             <div class="col-12">
               <button type="button" class="btn btn-primary edit-brand-btn">Update Brand</button>
             </div>
           </div>
-          
         </form>
       </div>
     </div>

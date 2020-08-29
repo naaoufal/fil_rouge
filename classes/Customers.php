@@ -18,7 +18,7 @@ class Customers
 	public function getCustomers(){
 		
 		$uname= $_SESSION['user'];
-		if($uname != 'malbok@gmail.com'){
+		if($uname != 'naoufelbenmensour@gmail.com'){
 			$query = $this->con->query("SELECT username, email, phone, street, city, pincode FROM customers WHERE  pincode = (SELECT pincode FROM vendors WHERE email='$uname') AND email IN (SELECT buyer_email FROM orders WHERE vendor_name='$uname')");
 			$ar = [];
 			if (@$query->num_rows > 0) {
@@ -46,8 +46,8 @@ class Customers
 	public function getCustomersOrder(){
 
 		$uname= $_SESSION['user'];
-		if($uname != 'malbok@gmail.com'){
-		$query = $this->con->query("SELECT product_image,product_title, product_qty, product_price, payment_id, payment_status, order_date, vendor_name, shipping_method, delivery_status FROM orders o WHERE vendor_name='$uname'");
+		if($uname != 'naoufelbenmensour@gmail.com'){
+		$query = $this->con->query("SELECT product_image, product_title, product_qty, product_price, payment_id, payment_status, order_date, vendor_name, buyer_name, shipping_method, delivery_status FROM orders o WHERE vendor_name='$uname'");
 		$ar = [];
 		if (@$query->num_rows > 0) {
 			while ($row = $query->fetch_assoc()) {
@@ -58,7 +58,7 @@ class Customers
 		return ['status'=> 303, 'message'=> 'no orders yet'];
 	}
 	else{
-		$query = $this->con->query("SELECT product_image,product_title, product_qty, product_price, payment_id, payment_status, order_date, vendor_name, shipping_method, delivery_status FROM orders");
+		$query = $this->con->query("SELECT product_image,product_title, product_qty, product_price, payment_id, payment_status, order_date, vendor_name, shipping_method, delivery_status, buyer_name FROM orders");
 		$ar = [];
 		if (@$query->num_rows > 0) {
 			while ($row = $query->fetch_assoc()) {

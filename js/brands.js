@@ -13,7 +13,7 @@ $(document).ready(function(){
 
 				var brandHTML = '';
 
-				if(admin != 'malbok@gmail.com'){
+				if(admin != 'naoufelbenmensour@gmail.com'){
 				$.each(resp.message, function(index, value){
 					brandHTML += '<tr>'+
 									'<td></td>'+

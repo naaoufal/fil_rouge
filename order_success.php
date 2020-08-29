@@ -102,7 +102,7 @@ $cust= $_SESSION['customer'];
 						<table class="table table-bordered" style="margin-top: 40px;">
 							<tr>
 								<th>Purchased from</th>
-								<td>Grocery Store</td>
+								<td>ELECTRO shop</td>
 							</tr>
 							<tr>
 								<th>Payment ID</th>
@@ -131,7 +131,7 @@ $cust= $_SESSION['customer'];
 							<tr>
 								<th>Order Date</th>
 								<td><?php 		    
-								date_default_timezone_set('Asia/Kolkata');
+								date_default_timezone_set('Africa/Morocco');
 								$date = date('d/m/Y H:i:s', time());
 								echo $date;?></td>
 							</tr>
@@ -150,12 +150,12 @@ $textversion= 'Order Received';
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'rfidlibrarypccoe@gmail.com';                 // SMTP username
+$mail->Username = 'naoufelbenmensour@gmail.com';                 // SMTP username
 $mail->Password = '14785269';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
-$mail->setFrom('rfidlibrarypccoe@gmail.com', 'Grocery Store');
+$mail->setFrom('naoufelbenmensour@gmail.com', 'Grocery Store');
 $mail->addAddress($vendor);               // Name is optional
 
 $mail->isHTML(true);
@@ -165,8 +165,8 @@ $mail->Body    = $htmlversion;
 $mail->AltBody = $textversion;
 
 if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
+    // echo 'Message could not be sent.';
+    // echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
     /*echo 'Message has been sent';*/
 }
@@ -198,10 +198,10 @@ $mail->Body    = $htmlversion;
 $mail->AltBody = $textversion;
 
 if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
+    // echo 'Message could not be sent.';
+    // echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
-    /*echo 'Message has been sent';*/
+    // echo 'Message has been sent';
 }
 }
 
@@ -232,8 +232,8 @@ $mail->Body    = $htmlversion;
 $mail->AltBody = $textversion;
 
 if(!$mail->send()) {
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
+    // echo 'Message could not be sent.';
+    // echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
     /*echo 'Message has been sent';*/
 }

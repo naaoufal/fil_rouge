@@ -17,6 +17,12 @@ $cust= $_SESSION['customer'];
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta property="og:title" content="Vide" />
 <meta name="keywords" content="Personal Care" />
+<style>
+	.btn{
+		margin-left: 35px;
+		margin : 20px;
+	}
+</style>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
@@ -75,7 +81,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="container">
 			
 			<div class="logo">
-				<h1 ><a href="index.php"><b>T<br>H<br>E</b>Grocery Store<span>The Best Supermarket</span></a></h1>
+			<h1 ><a href="index.php"><b>T<br>H<br>E</b>ELECTRO Store<span>The Best Electro Shop</span></a></h1>
 			</div>
 			
 			<?php 
@@ -137,9 +143,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
   <!---->
     <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel"> -->
       <!-- Indicators -->
-      <ol class="carousel-indicators">
+      <!-- <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -159,13 +165,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
         </div>
       </div>
     
-    </div>
+    </div> -->
     <!-- /.carousel -->
 
 		<div class="product">
 		<div class="container">
 			<div class="spec ">
-				<h3>Order Page</h3>
+				<h3>Orders</h3>
 				<div class="ser-t">
 					<b></b>
 					<span><i></i></span>
@@ -235,6 +241,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<p ><em class="ven_address"> <b>Vendor Address: </b> <?php echo $ven_address;?></em></p>
 											<div class="clearfix"></div>
 										</div>
+										<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">More Informations</button>
 										<button class="btn btn-danger" id="<?php echo $res2['order_id']; ?>">Return Order</button>
 									</div>
 								</div>
@@ -272,6 +279,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<p ><em class="ven_address"> <b>Vendor Address: </b> <?php echo $ven_address;?></em></p>
 											<div class="clearfix"></div>
 										</div>
+										<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">More Informations</button>
 										<button class="btn btn-secondary" id="">Order Returned</button>
 									</div>
 								</div>
@@ -280,7 +288,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								<?php }
 								else{
 									?>
-									<div class="col-md-3 pro-1">
+							<div class="col-md-3 pro-1">
 								<div class="col-m">								
 									<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img" id="<?php echo $res2['order_id']; ?>">
 										<?php echo "<img src='".$res2['product_image']."'>";?> 
@@ -297,8 +305,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="mid-3">
 											<p ><em class="item_qty"> Qty <?php echo $res2['product_qty'];?></em></p>
-											<div class="women"><b>Delivery Name:</b> Yet to Deliver</div>
-											<div class="women"><b>Delivery Status:</b> Yet to Deliver</div>
+											<!-- <div class="women"><b>Delivery Name:</b> Yet to Deliver</div> -->
+											<div class="women"><b>Delivery Status:</b><?php echo $res2['delivery_status'];?></div>
 											<div class="clearfix"></div>
 										</div>
 										<div class="mid-2">
@@ -307,7 +315,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<p ><em class="ven_name"> <b>Vendor Name: </b> <?php echo $ven_name;?></em></p>
 											<p ><em class="ven_ph"> <b>Vendor Phone No: </b> <?php echo $ven_ph;?></em></p>
 											<p ><em class="ven_address"> <b>Vendor Address: </b> <?php echo $ven_address;?></em></p>
-											<div class="clearfix"></div>
+											<div class="clearfix">
+											</div>
 										</div>
 										<button class="btn btn-danger" id="<?php echo $res2['order_id']; ?>">Cancel Order</button>
 									</div>

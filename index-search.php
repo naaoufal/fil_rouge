@@ -23,6 +23,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <link href="css/style.css" rel='stylesheet' type='text/css' />
+<style>
+	#banner{
+		background-image : url('images/wu.jpg');
+		/* background-color : red; */
+	}
+</style>
 <!-- js -->
    <script src="js/jquery-1.11.1.min.js"></script>
 <!-- //js -->
@@ -75,7 +81,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="container">
 			
 			<div class="logo">
-				<h1 ><a href="index.php"><b>T<br>H<br>E</b>Grocery Store<span>The Best Supermarket</span></a></h1>
+			<h1 ><a href="index.php"><b>T<br>H<br>E</b>ELECTRO Store<span>The Best Electro Shop</span></a></h1>
 			</div>
 
 			<?php 
@@ -133,10 +139,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>			
 </div>
   <!---->
-<div data-vide-bg="video/video">
+<div id="banner">
     <div class="container">
 		<div class="banner-info">
-			<h3> A One of A Kind Marketplace </h3>	
+			<h3> A One of A Kind Store </h3>	
 			<div class="search-form">
 				<form action="index-search.php" method="post">
 					<input type="text" placeholder="Search for over 5,000 products, categories & brands" name="search">

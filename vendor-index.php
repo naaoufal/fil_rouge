@@ -17,7 +17,7 @@ include "./templates/top.php";
 
     $admin= $_SESSION['user'];
 
-    if($admin == "malbok@gmail.com"){
+    if($admin == "naoufelbenmensour@gmail.com"){
     ?>
 
       <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
@@ -32,7 +32,7 @@ include "./templates/top.php";
               <th>Email</th>
               <th>Phone</th>
               <th>Address</th>
-              <th>Action</th>
+              <!-- <th>Action</th> -->
             </tr>
           </thead>
           <tbody id="admin_list">
@@ -56,6 +56,56 @@ include "./templates/top.php";
   </div>
 </div>
 
-<?php include "./templates/footer.php"; ?>
+<?php include "templates/footer.php"; ?>
 
-<script type="text/javascript" src="./js/admin.js"></script>
+<script>
+  $(document).ready(function(){
+
+getAdmins();
+
+function getAdmins(){
+  $.ajax({
+    url : 'classes/Admin.php',
+    method : 'POST',
+    data : {GET_ADMIN:1},
+    success : function(response){
+      console.log(response);
+      var resp = $.parseJSON(response);
+
+      if (resp.status == 202) {
+        var adminHTML = '';
+
+        $.each(resp.message, function(index, value){
+          adminHTML += '<tr>'+
+                  '<td>#</td>'+
+                  '<td>'+ value.username +'</td>'+
+                  '<td>'+ value.email +'</td>'+
+                  '<td>'+ value.phone +'</td>'+
+                  '<td>'+value.street+'<br>'+value.city+'<br>'+value.pincode+'</td>'+
+                  
+                '</tr>';
+        });
+
+        $("#admin_list").html(adminHTML);
+
+      }else if(resp.status == 303){
+        $("#admin_list").html(resp.message);
+      }
+
+      
+
+      
+
+    }
+  })
+  
+}
+
+$(".add-brand").on("click", function(){
+
+  alert();
+
+});
+
+});
+</script>
