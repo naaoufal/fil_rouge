@@ -246,10 +246,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									</div>
 								</div>
 							</div>
-							<?php 
-							}
-								}
-								elseif ($del == 'Returned') { ?>
+							<?php } } elseif ($del == 'Returned') { ?>
 									<div class="col-md-3 pro-1">
 								<div class="col-m">								
 									<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img" id="<?php echo $res2['order_id']; ?>">
@@ -279,15 +276,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 											<p ><em class="ven_address"> <b>Vendor Address: </b> <?php echo $ven_address;?></em></p>
 											<div class="clearfix"></div>
 										</div>
-										<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">More Informations</button>
+										<!-- <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">More Informations</button> -->
 										<button class="btn btn-secondary" id="">Order Returned</button>
 									</div>
 								</div>
 							</div>
 
-								<?php }
-								else{
-									?>
+								<?php } else{ ?>
 							<div class="col-md-3 pro-1">
 								<div class="col-m">								
 									<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img" id="<?php echo $res2['order_id']; ?>">

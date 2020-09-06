@@ -171,7 +171,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						if (isset($_POST['search'])){
 							$search= $_POST['search'];
 						}
-								$q2= "SELECT p.product_id, p.product_title, p.product_price,p.product_qty, p.product_desc, p.product_image, c.cat_title, c.cat_id, b.brand_id, b.brand_title FROM products p JOIN categories c ON c.cat_id = p.product_cat JOIN brands b ON b.brand_id = p.product_brand WHERE p.product_title LIKE '%$search%' OR p.product_desc LIKE '%$search%' OR  c.cat_title LIKE '%$search%' OR b.brand_title LIKE '%$search%'";
+								$q2= "SELECT * FROM products  WHERE product_title LIKE '%$search%' OR product_desc LIKE '%$search%'";
 								$data2= mysqli_query($conn, $q2);
 								$total2= mysqli_num_rows($data2);
 								
